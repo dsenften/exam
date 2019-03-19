@@ -37,72 +37,12 @@
         <plugins>
 
             <plugin>
-                <groupId>external.atlassian.jgitflow</groupId>
-                <artifactId>jgitflow-maven-plugin</artifactId>
-                <version>1.0-m5.1</version>
-                <configuration>
-                    <!-- see goals wiki page for configuration options -->
-                </configuration>
-            </plugin>
-
-            <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.8.0</version>
                 <configuration>
                     <source>${java.source.version}</source>
                     <target>${java.target.version}</target>
                 </configuration>
-            </plugin>
-
-            <plugin>
-                <groupId>org.antlr</groupId>
-                <artifactId>antlr4-maven-plugin</artifactId>
-                <version>${antlr.version}</version>
-                <configuration>
-                    <visitor>true</visitor>
-                    <listener>true</listener>
-                </configuration>
-                <executions>
-                    <execution>
-                        <id>antlr</id>
-                        <goals>
-                            <goal>antlr4</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-
-            <plugin>
-                <artifactId>exec-maven-plugin</artifactId>
-                <version>1.6.0</version>
-                <groupId>org.codehaus.mojo</groupId>
-                <executions>
-
-                    <execution>
-                        <id>Compile TeX files</id>
-                        <phase>generate-sources</phase>
-                        <goals>
-                            <goal>exec</goal>
-                        </goals>
-                        <configuration>
-                            <workingDirectory>${basedir}/src/main/tex</workingDirectory>
-                            <executable>${basedir}/scripts/latex-compile.sh</executable>
-                        </configuration>
-                    </execution>
-
-                    <execution>
-                        <id>Cleanup temporary TeX output files</id>
-                        <phase>clean</phase>
-                        <goals>
-                            <goal>exec</goal>
-                        </goals>
-                        <configuration>
-                            <workingDirectory>${basedir}/src/main/tex</workingDirectory>
-                            <executable>${basedir}/scripts/latex-clean.sh</executable>
-                        </configuration>
-                    </execution>
-
-                </executions>
             </plugin>
 
         </plugins>
@@ -126,13 +66,6 @@
             <artifactId>junit-jupiter-api</artifactId>
             <version>${junit.jupiter.version}</version>
             <scope>test</scope>
-        </dependency>
-
-        <!-- https://mvnrepository.com/artifact/org.antlr/antlr4 -->
-        <dependency>
-            <groupId>org.antlr</groupId>
-            <artifactId>antlr4</artifactId>
-            <version>${antlr.version}</version>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/org.hamcrest/hamcrest-all -->
