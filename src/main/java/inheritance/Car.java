@@ -4,6 +4,19 @@ package inheritance;
 public class Car {
 
     private CarType type;
+    private double price;
+
+    public void setType(CarType type) {
+        this.type = type;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
 
     public Car(CarType type) {
         this.type = type;
