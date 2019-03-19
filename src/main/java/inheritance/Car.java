@@ -4,6 +4,7 @@ package inheritance;
 public class Car {
 
     private CarType type;
+    private  double preis;
 
     public Car(CarType type) {
         this.type = type;
