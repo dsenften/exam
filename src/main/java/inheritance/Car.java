@@ -12,6 +12,7 @@ public class Car {
 
     public double getPrice() {
         return price;
+
     }
 
     public void setPrice(double price) {
