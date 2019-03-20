@@ -3,6 +3,7 @@ package network;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.fail;
 
 /**
@@ -31,7 +32,7 @@ class NewsFeedTest {
 
         // TODO Wie kann diese Funktion getestet werden?
 
-        fail();
+        assertEquals(20,getClass());
     }
 
     /**

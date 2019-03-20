@@ -3,6 +3,7 @@ package network;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.fail;
 
 /**
@@ -11,24 +12,29 @@ import static org.junit.jupiter.api.Assertions.fail;
 class FotoPostTest {
 
     // TODO Die folgenden, leeren Tests sind lediglich Platzhalter.
-    //      Diese können auch entfernt oderdurch eigene, andere Tests
+    //      Diese können auch entfernt oder durch eigene, andere Tests
     //      ersetzt werden.
 
     // TODO Welche Funktionen müssen wir an dieser Stelle einfügen?
 
     @BeforeEach
-    void setUp() {
-        fail();
+    void setUp(){
+        assertEquals(0,getClass());
+
     }
+
+
 
     @Test
     void test1() {
-        fail();
+
+        assertEquals("simu",getClass());
     }
 
     @Test
     void test2() {
-        fail();
+
+        assertEquals("tier",getClass());
     }
 
 }

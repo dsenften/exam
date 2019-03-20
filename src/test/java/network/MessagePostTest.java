@@ -33,6 +33,7 @@ class MessagePostTest {
     @BeforeEach
     void setUp() {
         post = new MessagePost(author, message);
+        assertEquals("author",getClass());
 
         // TODO Braucht es an dieser Stelle noch weitere Initilisierungen?
     }
@@ -42,6 +43,7 @@ class MessagePostTest {
      */
     @Test
     void likeIt() {
+        assertEquals(50,getClass());
 
         // Zur Überprüfung der Anzahl 'gefällt mir' muss die
         // zu testende Klasse 'MessagePost' um eine Funktion
@@ -49,7 +51,9 @@ class MessagePostTest {
 
         // TODO Testfall ergänzen.
 
-        fail();
+        dontLikeIt(); {
+            assertEquals(50,getClass());
+        }
     }
 
     /**
@@ -144,7 +148,7 @@ class MessagePostTest {
 
         // TODO Wie übeprüfen diese 'lange' Meldung?
 
-        fail();
+        assertEquals(2,getClass());
     }
 
 }

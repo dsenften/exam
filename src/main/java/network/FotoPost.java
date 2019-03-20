@@ -12,7 +12,7 @@ public class FotoPost extends Post {
 
     private String fileName;  // Name der Bilddatei
     private String title;     // Bildüberschrift
-
+    private String authoor;   // Shooter
     /**
      * Konstruktor für Objekte der Klasse FotoPost.
      *
@@ -23,6 +23,9 @@ public class FotoPost extends Post {
     public FotoPost(String author, String fileName, String title) {
 
         // TODO Richiges Initialisieren dieses Objektes.
+    super (author);
+    fileName = fileName;
+    title = title;
 
     }
 
