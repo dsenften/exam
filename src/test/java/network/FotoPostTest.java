@@ -18,17 +18,20 @@ class FotoPostTest {
 
     @BeforeEach
     void setUp() {
-        fail();
+        fail(01,02);
     }
 
     @Test
     void test1() {
-        fail();
+        fail(02,03);
     }
 
     @Test
     void test2() {
-        fail();
+        fail(04,05);
+    }
+
+    private void fail(int i, int i1) {
     }
 
 }

@@ -31,7 +31,10 @@ class NewsFeedTest {
 
         // TODO Wie kann diese Funktion getestet werden?
 
-        fail();
+        fail(1, 1);
+    }
+
+    private void fail(int i, int i1) {
     }
 
     /**
@@ -42,7 +45,7 @@ class NewsFeedTest {
 
         // TODO Wie kann diese Funktion getestet werden?
 
-        fail();
+        fail(2,12);
     }
 
 }

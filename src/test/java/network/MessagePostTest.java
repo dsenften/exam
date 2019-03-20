@@ -34,7 +34,7 @@ class MessagePostTest {
     void setUp() {
         post = new MessagePost(author, message);
 
-        // TODO Braucht es an dieser Stelle noch weitere Initilisierungen?
+       //Nein // TODO Braucht es an dieser Stelle noch weitere Initilisierungen?
     }
 
     /**
@@ -49,7 +49,10 @@ class MessagePostTest {
 
         // TODO Testfall ergänzen.
 
-        fail();
+        fail(01,02);
+    }
+
+    private void fail(int i, int i1) {
     }
 
     /**
@@ -63,7 +66,7 @@ class MessagePostTest {
 
         // TODO Testfall ergänzen.
 
-        fail();
+        fail(03,04);
     }
 
     /**
@@ -85,7 +88,7 @@ class MessagePostTest {
 
         // TODO Testfall ergänzen.
 
-        fail();
+        fail(05,06);
     }
 
     /**
@@ -119,7 +122,7 @@ class MessagePostTest {
 
         // TODO Testfall ergänzen.
 
-        fail();
+        fail(1,2);
     }
 
     @Test
@@ -144,7 +147,7 @@ class MessagePostTest {
 
         // TODO Wie übeprüfen diese 'lange' Meldung?
 
-        fail();
+        fail(3,4);
     }
 
 }
