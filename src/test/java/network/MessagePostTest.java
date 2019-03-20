@@ -34,7 +34,7 @@ class MessagePostTest {
     void setUp() {
         post = new MessagePost(author, message);
 
-        // TODO Braucht es an dieser Stelle noch weitere Initilisierungen?
+        assertEquals("", message);
     }
 
     /**
@@ -47,8 +47,7 @@ class MessagePostTest {
         // zu testende Klasse 'MessagePost' um eine Funktion
         // erweitert werden.
 
-        // TODO Testfall ergänzen.
-
+      assertEquals(0, );
         fail();
     }
 
@@ -117,7 +116,7 @@ class MessagePostTest {
 
         post.show();
 
-        // TODO Testfall ergänzen.
+        assertEquals();
 
         fail();
     }

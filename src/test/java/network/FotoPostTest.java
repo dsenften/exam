@@ -14,7 +14,7 @@ class FotoPostTest {
     //      Diese können auch entfernt oderdurch eigene, andere Tests
     //      ersetzt werden.
 
-    // TODO Welche Funktionen müssen wir an dieser Stelle einfügen?
+    FotoPostTest
 
     @BeforeEach
     void setUp() {
