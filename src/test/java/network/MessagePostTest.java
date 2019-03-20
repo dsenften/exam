@@ -35,6 +35,7 @@ class MessagePostTest {
         post = new MessagePost(author, message);
 
         // TODO Braucht es an dieser Stelle noch weitere Initilisierungen?
+        //Nein
     }
 
     /**

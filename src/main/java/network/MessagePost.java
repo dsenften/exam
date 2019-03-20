@@ -12,6 +12,8 @@ public class MessagePost extends Post {
 
     private String message;   // Eine beliebig lange, mehrzeilige Nachricht.
 
+
+
     /**
      * Konstruktor für Objekte der Klasse MessagePost.
      *

@@ -12,7 +12,7 @@ import java.util.ArrayList;
 @SuppressWarnings("ALL")
 public abstract class Post {
 
-    private String author;  // Benutzername des Senders
+    public String author;  // Benutzername des Senders
     private long timestamp;
     private int numberOfLikes;
     private ArrayList<String> comments;

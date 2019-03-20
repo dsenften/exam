@@ -11,10 +11,14 @@ import static org.junit.jupiter.api.Assertions.fail;
 @SuppressWarnings("FieldCanBeLocal")
 class NewsFeedTest {
 
+    {
+
+    }
     // TODO Deklarieren des zu testenden Objektes
 
     @BeforeEach
     void setUp() {
+
         // TODO Initialisieren des Objektes, welche in den Tests verwendet wird.
     }
 
