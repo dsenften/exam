@@ -23,3 +23,4 @@ class CarTest {
         assertEquals(CarType.BMW, car.getType());
     }
 }
+
