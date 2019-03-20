@@ -16,9 +16,10 @@ class FotoPostTest {
 
     // TODO Welche Funktionen müssen wir an dieser Stelle einfügen?
 
+        private FotoPost fotoPost;
+
     @BeforeEach
-    void setUp() {
-        fail();
+    void setUp() { fotoPost = new fotoPost(fileName: Author: );
     }
 
     @Test
