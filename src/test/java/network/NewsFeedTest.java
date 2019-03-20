@@ -16,6 +16,10 @@ class NewsFeedTest {
     @BeforeEach
     void setUp() {
         // TODO Initialisieren des Objektes, welche in den Tests verwendet wird.
+    public class NewsFeedTest{
+        public static int x=5;
+        public static void main (String [] args){
+    }
     }
 
     /**
