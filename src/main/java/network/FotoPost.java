@@ -21,6 +21,8 @@ public class FotoPost extends Post {
      * @param fileName Dateiname des Bildes
      * @param title    Überschrift für das Bild
      */
+
+    //Von hier
     public FotoPost(String author, String fileName, String title)
     {
         this.author = author;
@@ -62,3 +64,5 @@ public class FotoPost extends Post {
     }
     // TODO Implementieren der fehlenden Methoden.
 }
+
+//bis hier habe ich gemacht in der Test

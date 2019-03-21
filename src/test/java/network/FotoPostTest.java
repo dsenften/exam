@@ -7,9 +7,11 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class FotoPostTest {
 
+    private FotoPost FotoPost;
+
     @BeforeEach
     void setUp() {
-
+    FotoPost = new FotoPost(FotoPost.author());
     }
 
     @Test

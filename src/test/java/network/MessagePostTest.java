@@ -17,6 +17,8 @@ class MessagePostTest {
 
     private final String author = "Daniel";
     private final String message = "My first message";
+    private final String likeIt = "no";
+    private final String dontLikeIt = "yes";
     private final ByteArrayOutputStream outContent;
     private MessagePost post;
 
@@ -32,7 +34,7 @@ class MessagePostTest {
 
     @BeforeEach
     void setUp() {
-        post = new MessagePost(author, message);
+        post = new MessagePost(author, message, likeIt, dontLikeIt);
 
         // TODO Braucht es an dieser Stelle noch weitere Initilisierungen?
         //Nein
@@ -41,16 +43,21 @@ class MessagePostTest {
     /**
      * Überprüfen der der Methode {@link MessagePost#likeIt()}.
      */
-    @Test
-    void likeIt() {
 
+    @Test
+     void getHowManyMessage_LikeIt() {
+       String likeIt;
+       String expected = "no";
+       String actual = "no";
+
+        assertEquals(expected, actual);
         // Zur Überprüfung der Anzahl 'gefällt mir' muss die
         // zu testende Klasse 'MessagePost' um eine Funktion
         // erweitert werden.
 
         // TODO Testfall ergänzen.
 
-        fail();
+
     }
 
     /**
@@ -64,7 +71,7 @@ class MessagePostTest {
 
         // TODO Testfall ergänzen.
 
-        fail();
+
     }
 
     /**

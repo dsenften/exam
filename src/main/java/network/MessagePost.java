@@ -10,7 +10,9 @@ import org.jetbrains.annotations.NotNull;
 @SuppressWarnings("ALL")
 public class MessagePost extends Post {
 
-    private String message;   // Eine beliebig lange, mehrzeilige Nachricht.
+    private String message;
+    private String likeIt;
+    private String dontLikeIt;// Eine beliebig lange, mehrzeilige Nachricht.
 
 
 
@@ -20,9 +22,11 @@ public class MessagePost extends Post {
      * @param autor   Benutzername des Einsenders
      * @param message Text dieser Meldung
      */
-    public MessagePost(String autor, String message) {
+    public MessagePost(String autor, String message, String LikeIt, String DontLikeIt) {
         super(autor);
         message = message;
+        LikeIt = LikeIt;
+        DontLikeIt = DontLikeIt;
     }
 
     /**
@@ -34,4 +38,16 @@ public class MessagePost extends Post {
     public String getMessage() {
         return message;
     }
+
+    public String getLikeIt(){
+        return likeIt;
+    }
+
+    public String getDontLikeIt(){
+        return dontLikeIt;
+    }
+
+
+
+
 }
