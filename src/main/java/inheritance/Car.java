@@ -4,6 +4,7 @@ package inheritance;
 public class Car {
 
     public static final double MAX_PRICE = 15_000;
+
     private CarType type;
     private double price;
 
