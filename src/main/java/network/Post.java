@@ -3,6 +3,7 @@ package network;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 /**
  * Diese Klasse speichert Informationen über eine Meldung für den Newsfeed eines
@@ -13,6 +14,7 @@ import java.util.ArrayList;
 public abstract class Post {
 
     private String author;  // Benutzername des Senders
+
     private long timestamp;
     private int numberOfLikes;
     private ArrayList<String> comments;
@@ -55,12 +57,26 @@ public abstract class Post {
     }
 
     /**
+     * Diese Funktion wird ausschliesslich zu Testzwecken verwendet. Aus diesem Grund
+     * ist der Zugriff auf package-Level eingeschränkt.
+     *
+     * @return Anzahl 'gefällt mir'
+     */
+    int getNumberOfLikes() {
+        return numberOfLikes;
+    }
+
+    /**
      * Füge der Post einen Kommentar hinzu.
      *
      * @param text Neu hinzuzufügende Kommentar
      */
     public void addComment(String text) {
         comments.add(text);
+    }
+
+    public String getAuthor() {
+        return author;
     }
 
     /**
@@ -118,5 +134,21 @@ public abstract class Post {
         } else {
             return "vor " + seconds + " Sekunden";
         }
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Post)) return false;
+        Post post = (Post) o;
+        return timestamp == post.timestamp &&
+                numberOfLikes == post.numberOfLikes &&
+                author.equals(post.author) &&
+                comments.equals(post.comments);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(author, timestamp, numberOfLikes, comments);
     }
 }

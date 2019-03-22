@@ -21,10 +21,24 @@ public class FotoPost extends Post {
      * @param title    Überschrift für das Bild
      */
     public FotoPost(String author, String fileName, String title) {
-
-        // TODO Richiges Initialisieren dieses Objektes.
-
+        super(author);
+        this.fileName = fileName;
+        this.title = title;
     }
 
-    // TODO Implementieren der fehlenden Methoden.
+    public String getFileName() {
+        return fileName;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    @Override
+    public String toString() {
+        return "FotoPost{" +
+                "fileName='" + fileName + '\'' +
+                ", title='" + title + '\'' +
+                '}';
+    }
 }

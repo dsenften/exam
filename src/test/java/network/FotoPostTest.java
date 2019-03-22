@@ -3,32 +3,36 @@ package network;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.fail;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * Implementation aller Testmethoden zu {@link FotoPost}.
  */
 class FotoPostTest {
 
-    // TODO Die folgenden, leeren Tests sind lediglich Platzhalter.
-    //      Diese können auch entfernt oderdurch eigene, andere Tests
-    //      ersetzt werden.
-
-    // TODO Welche Funktionen müssen wir an dieser Stelle einfügen?
+    private final String author = "Daniel";
+    private final String fileName = "FileName.png";
+    private final String title = "Title of image";
+    private FotoPost post;
 
     @BeforeEach
     void setUp() {
-        fail();
+        post = new FotoPost(author, fileName, title);
     }
 
     @Test
-    void test1() {
-        fail();
+    void getFileName() {
+        assertEquals(fileName, post.getFileName());
     }
 
     @Test
-    void test2() {
-        fail();
+    void getTitle() {
+        assertEquals(title, post.getTitle());
+    }
+
+    @Test
+    void getAuthor() {
+        assertEquals(author, post.getAuthor());
     }
 
 }

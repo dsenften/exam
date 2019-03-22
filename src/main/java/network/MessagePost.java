@@ -20,7 +20,7 @@ public class MessagePost extends Post {
      */
     public MessagePost(String autor, String message) {
         super(autor);
-        message = message;
+        this.message = message;
     }
 
     /**
