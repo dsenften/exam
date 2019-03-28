@@ -13,9 +13,10 @@ class FotoPostTest {
     private final String author = "Daniel";
     private final String fileName = "FileName.png";
     private final String title = "Title of image";
-    private FotoPost post;
+    private FotoPost post; // objekt definieren
 
     @BeforeEach
+        // inizializieren
     void setUp() {
         post = new FotoPost(author, fileName, title);
     }
