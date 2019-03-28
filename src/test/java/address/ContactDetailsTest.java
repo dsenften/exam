@@ -29,7 +29,7 @@ class ContactDetailsTest {
         contact = new ContactDetails(null, null, addess);
 
         // TODO Wie kann dieser erwartetet Fehler getestet werden?
-        //mit einem assertEquals
+        //mit einem assertEqualsh
     }
 
     /**
