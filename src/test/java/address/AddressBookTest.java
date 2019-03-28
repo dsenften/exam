@@ -31,6 +31,7 @@ class AddressBookTest {
     @Test
     void getDetails() {
         // TODO Wie muss dieser Test implementiert werden?
+
         fail();
     }
 
@@ -40,6 +41,7 @@ class AddressBookTest {
     @Test
     void keyInUse() {
         // TODO Wie muss dieser Test implementiert werden?
+
         fail();
     }
 
@@ -56,10 +58,12 @@ class AddressBookTest {
         contact = new ContactDetails("Daniel", "5678", "Adresse 1");
         book.addDetails(contact);
 
-        // TODO Was passiert, wenn sich nur die Telefonnummer ändert?
+
+        // TODO Der Name und die Adresse bleiben die selben.
         fail();
 
-        // TODO Was passiert, wenn der Datensatz identisch ist?
+
+        // TODO Es gibt ein fehler da die daten identisch sind.
         fail();
     }
 
@@ -69,6 +73,7 @@ class AddressBookTest {
     @Test
     void changeDetails() {
         // TODO Wie muss dieser Test implementiert werden?
+        // Ich habe diese frage nicht verstanden
         fail();
     }
 
@@ -92,6 +97,7 @@ class AddressBookTest {
     @Test
     void search() {
         // TODO Wie muss dieser Test implementiert werden?
+        // Ich habe diese frage nicht verstanden!
         fail();
     }
 
