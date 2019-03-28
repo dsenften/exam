@@ -14,8 +14,11 @@ public class AddressBook {
 
     /**
      * Perform any initialization for the address book.
+     * @param s
+     * @param s1
+     * @param s2
      */
-    public AddressBook() {
+    public AddressBook(String s, String s1, String s2) {
         book = new TreeMap<String, ContactDetails>();
         numberOfEntries = 0;
     }
@@ -63,8 +66,7 @@ public class AddressBook {
      * @param details The replacement details. Must not be null.
      * @throws IllegalArgumentException If either argument is null.
      */
-    public void changeDetails(String oldKey,
-                              ContactDetails details) {
+    public void changeDetails(String oldKey, ContactDetails details) {
         if (details == null) {
             throw new IllegalArgumentException("Null details passed to changeDetails.");
         }

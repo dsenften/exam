@@ -20,7 +20,7 @@ public class AddressBookDemo {
                 new ContactDetails("Daniel", "+41 79 300 47 24", "Hofstattweg 6, 3422 Kirchberg"),
                 new ContactDetails("Peter", "+41 79 123 67 98", "Bernstrasse 19, 3011 Bern"),
         };
-        book = new AddressBook();
+        book = new AddressBook("1", "2", "3");
         for (ContactDetails details : sampleDetails) {
             book.addDetails(details);
         }
