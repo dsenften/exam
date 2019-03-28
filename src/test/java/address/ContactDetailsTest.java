@@ -27,6 +27,7 @@ class ContactDetailsTest {
 
         // Die folgende Zeile darf nicht gelöscht werden.
         contact = new ContactDetails(null, null, addess);
+        assertEquals(name, );
 
         // TODO Wie kann dieser erwartetet Fehler getestet werden?
     }
