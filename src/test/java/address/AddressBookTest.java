@@ -3,7 +3,8 @@ package address;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.fail;
+import static org.junit.jupiter.api.Assertions.*;
+
 
 /**
  * Testklasse für {@link AddressBook}.
@@ -12,6 +13,7 @@ import static org.junit.jupiter.api.Assertions.fail;
 class AddressBookTest {
 
     private AddressBook book;
+    private final String ContactDetails = "Daniel, +41 79 300 47 24, Hofstattweg 6, 3422 Kirchberg" ;
 
     @BeforeEach
     void setUp() {
@@ -31,7 +33,8 @@ class AddressBookTest {
     @Test
     void getDetails() {
         // TODO Wie muss dieser Test implementiert werden?
-        fail();
+        assertEquals(ContactDetails, book.getDetails("Daniel, +41 79 300 47 24, Hofstattweg 6, 3422 Kirchberg"));
+
     }
 
     /**
@@ -40,7 +43,8 @@ class AddressBookTest {
     @Test
     void keyInUse() {
         // TODO Wie muss dieser Test implementiert werden?
-        fail();
+        assertTrue(book.keyInUse("Daniel"));
+
     }
 
     /**
@@ -53,14 +57,14 @@ class AddressBookTest {
         contact = new ContactDetails("Daniel", "1234", "Adresse 1");
         book.addDetails(contact);
 
-        contact = new ContactDetails("Daniel", "5678", "Adresse 1");
+        contact = new ContactDetails("Daniel", "1234", "Adresse 1");
         book.addDetails(contact);
 
         // TODO Was passiert, wenn sich nur die Telefonnummer ändert?
-        fail();
+        //àndert sich nur den Nummer von den Contact
 
         // TODO Was passiert, wenn der Datensatz identisch ist?
-        fail();
+        //Datensatz wird added gespeichert, aber nur einmal
     }
 
     /**
@@ -69,7 +73,8 @@ class AddressBookTest {
     @Test
     void changeDetails() {
         // TODO Wie muss dieser Test implementiert werden?
-        fail();
+        ContactDetails contact = new ContactDetails("Peter", "+41 79 123 67 98", "Bernstrasse 19, 3011 Bern");
+        book.changeDetails("Leon", contact);
     }
 
     /**
@@ -83,7 +88,7 @@ class AddressBookTest {
         book.changeDetails("Daniel", contact);
 
         // TODO Wie muss obiges Verhalten getestet werden
-        fail();
+
     }
 
     /**
@@ -92,7 +97,7 @@ class AddressBookTest {
     @Test
     void search() {
         // TODO Wie muss dieser Test implementiert werden?
-        fail();
+        assertTrue(book, search());
     }
 
     /**
@@ -101,7 +106,8 @@ class AddressBookTest {
     @Test
     void getNumberOfEntries() {
         // TODO Wie muss dieser Test implementiert werden?
-        fail();
+       int numberOfEntries = book.getNumberOfEntries();
+       assertEquals(0, numberOfEntries );
     }
 
     /**
