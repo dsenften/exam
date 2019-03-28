@@ -45,7 +45,7 @@ class ContactDetailsTest {
     @Test
     void getPhone() {
         // TODO Wie muss dieser Test implementiert werden?
-        fail();
+        assertEquals(phone, contact.getPhone());
     }
 
     /**
@@ -55,7 +55,7 @@ class ContactDetailsTest {
     void getAddress() {
 
         // TODO Wie muss dieser Test implementiert werden?
-        fail();
+        assertEquals(addess, contact.getAddress());
     }
 
     /**
