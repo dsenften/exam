@@ -30,7 +30,7 @@ class AddressBookTest {
      */
     @Test
     void getDetails() {
-        // TODO Wie muss dieser Test implementiert werden?
+        // TODO Wie muss dieser Test implementiert werden? naja in einer art und weise die ich nicht gelernt habe danke
         fail();
     }
 
@@ -39,7 +39,7 @@ class AddressBookTest {
      */
     @Test
     void keyInUse() {
-        // TODO Wie muss dieser Test implementiert werden?
+        // TODO Wie muss dieser Test implementiert werden? garnicht
         fail();
     }
 
@@ -56,10 +56,10 @@ class AddressBookTest {
         contact = new ContactDetails("Daniel", "5678", "Adresse 1");
         book.addDetails(contact);
 
-        // TODO Was passiert, wenn sich nur die Telefonnummer ändert?
+        // TODO Was passiert, wenn sich nur die Telefonnummer ändert? alles
         fail();
 
-        // TODO Was passiert, wenn der Datensatz identisch ist?
+        // TODO Was passiert, wenn der Datensatz identisch ist? nichts
         fail();
     }
 
@@ -68,8 +68,8 @@ class AddressBookTest {
      */
     @Test
     void changeDetails() {
-        // TODO Wie muss dieser Test implementiert werden?
-        fail();
+        // TODO Wie muss dieser Test implementiert werden? mit getter und setter
+       fail();
     }
 
     /**
@@ -82,7 +82,7 @@ class AddressBookTest {
         ContactDetails contact = new ContactDetails(null, null, null);
         book.changeDetails("Daniel", contact);
 
-        // TODO Wie muss obiges Verhalten getestet werden
+        // TODO Wie muss obiges Verhalten getestet werden im objektorientiertem style
         fail();
     }
 
@@ -91,7 +91,7 @@ class AddressBookTest {
      */
     @Test
     void search() {
-        // TODO Wie muss dieser Test implementiert werden?
+        // TODO Wie muss dieser Test implementiert werden? halt objektorientiert mit daniel
         fail();
     }
 
@@ -100,7 +100,7 @@ class AddressBookTest {
      */
     @Test
     void getNumberOfEntries() {
-        // TODO Wie muss dieser Test implementiert werden?
+        // TODO Wie muss dieser Test implementiert werden? naja so wie es halt sein soll und
         fail();
     }
 
@@ -109,7 +109,7 @@ class AddressBookTest {
      */
     @Test
     void removeDetails() {
-        // TODO Wie muss dieser Test implementiert werden?
+        // TODO Wie muss dieser Test implementiert werden? so
         fail();
     }
 
@@ -118,7 +118,7 @@ class AddressBookTest {
      */
     @Test
     void listDetails() {
-        // TODO Wie muss dieser Test implementiert werden?
+        // TODO Wie muss dieser Test implementiert werden? soso
         fail();
     }
 }
