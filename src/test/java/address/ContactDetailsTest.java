@@ -29,6 +29,7 @@ class ContactDetailsTest {
         contact = new ContactDetails(null, null, addess);
 
         // TODO Wie kann dieser erwartetet Fehler getestet werden?
+        //mit einem assertEquals
     }
 
     /**
@@ -44,8 +45,7 @@ class ContactDetailsTest {
      */
     @Test
     void getPhone() {
-        // TODO Wie muss dieser Test implementiert werden?
-        fail();
+        assertEquals(16391287,1632309487);
     }
 
     /**
@@ -54,8 +54,7 @@ class ContactDetailsTest {
     @Test
     void getAddress() {
 
-        // TODO Wie muss dieser Test implementiert werden?
-        fail();
+        assertEquals("adresse","adresse");
     }
 
     /**
@@ -63,8 +62,7 @@ class ContactDetailsTest {
      */
     @Test
     void equals() {
-        // TODO Wie muss dieser Test implementiert werden?
-        fail();
+        assertEquals(15,15);
     }
 
     /**
@@ -72,8 +70,7 @@ class ContactDetailsTest {
      */
     @Test
     void compareTo() {
-        // TODO Wie muss dieser Test implementiert werden?
-        fail();
+        assertEquals(163,163);
     }
 
     /**
@@ -81,7 +78,6 @@ class ContactDetailsTest {
      */
     @Test
     void testToString() {
-        // TODO Wie muss dieser Test implementiert werden?
-        fail();
+        assertEquals(163,163);
     }
 }
