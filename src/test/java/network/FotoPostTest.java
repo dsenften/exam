@@ -4,49 +4,35 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.fail;
 
 /**
  * Implementation aller Testmethoden zu {@link FotoPost}.
  */
 class FotoPostTest {
-    private String fileName;  // Name der Bilddatei
-    private String title;     // Bildüberschrift
-    private String author;
 
-    private FotoPost fp;
-
-    // TODO Die folgenden, leeren Tests sind lediglich Platzhalter.
-    //      Diese können auch entfernt oder durch eigene, andere Tests
-    //      ersetzt werden.
-
-    // TODO Welche Funktionen müssen wir an dieser Stelle einfügen?
+    private final String author = "Daniel";
+    private final String fileName = "FileName.png";
+    private final String title = "Title of image";
+    private FotoPost post;
 
     @BeforeEach
-    void setUp(){
-        fp =new FotoPost(fileName,title,author);
-
-
+    void setUp() {
+        post = new FotoPost(author, fileName, title);
     }
 
     @Test
-    void getFilename() {
-        assertEquals(fileName,fp.getFileName());
-
-
-
+    void getFileName() {
+        assertEquals(fileName, post.getFileName());
     }
 
     @Test
     void getTitle() {
-
-
-
-
+        assertEquals(title, post.getTitle());
     }
-    @Test
-    void getAuthor(){
 
+    @Test
+    void getAuthor() {
+        assertEquals(author, post.getAuthor());
     }
 
 }

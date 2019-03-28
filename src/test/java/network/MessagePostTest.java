@@ -6,13 +6,12 @@ import org.junit.jupiter.api.Test;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.fail;
+import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * Implementation aller Testmethoden zu {@link MessagePost}.
  */
-@SuppressWarnings("FieldCanBeLocal")
+@SuppressWarnings("ALL")
 class MessagePostTest {
 
     private final String author = "Daniel";
@@ -21,6 +20,7 @@ class MessagePostTest {
     private MessagePost post;
 
     {
+        //Initialisierungsblock
         /*
          * Redefinieren von 'System.out', damit wir auch diesen Inhalt in einem
          * Testfall überprüfen können. Weitere Informationen findest Du
@@ -33,8 +33,6 @@ class MessagePostTest {
     @BeforeEach
     void setUp() {
         post = new MessagePost(author, message);
-
-        // TODO Braucht es an dieser Stelle noch weitere Initilisierungen?
     }
 
     /**
@@ -43,28 +41,28 @@ class MessagePostTest {
     @Test
     void likeIt() {
 
-
         // Zur Überprüfung der Anzahl 'gefällt mir' muss die
-        // zu testende Klasse 'MessagePost' um eine Funktion
+        // zu testende Klasse 'Post' um eine Funktion
         // erweitert werden.
 
-        // TODO Testfall ergänzen.
-
-        fail();
+        int numberofLikes = post.getNumberOfLikes();
+        post.likeIt();
+        assertEquals(numberofLikes + 1, post.getNumberOfLikes());
     }
 
     /**
-     * Überprüfen der der Methode {@link MessagePost#dontLikeIt()}.* <p>
+     * Überprüfen der der Methode {@link MessagePost#dontLikeIt()}.
+     * <p>
      */
     @Test
     void dontLikeIt() {
 
         // Zur Überprüfung der Anzahl 'gefällt mir' muss die
-        // zu testende Klasse 'MessagePost' erweitert werden.
+        // zu testende Klasse 'Post' erweitert werden.
 
-        // TODO Testfall ergänzen.
-
-        fail();
+        int numberofLikes = post.getNumberOfLikes();
+        post.dontLikeIt();
+        assertEquals(0, post.getNumberOfLikes());
     }
 
     /**
@@ -84,9 +82,7 @@ class MessagePostTest {
         post.addComment(comment);
         post.show();
 
-        // TODO Testfall ergänzen.
-
-        fail();
+        assertTrue(outContent.toString().contains(comment));
     }
 
     /**
@@ -95,10 +91,12 @@ class MessagePostTest {
     @Test
     void getTimestamp() {
         long timestamp = System.currentTimeMillis();
-        assertEquals(timestamp, post.getTimestamp());
 
-        // TODO Falls dieser Test in Deiner Umgebung nicht funktioniert,
-        //      resp. ungleiche Resultate liefert, dann musst Du diesen umschreiben.
+        // Die Funktionsweise dieses Tests ist offensichtlich abhängig vom
+        // Betriebssystem. Unter Winwows scheint der Test zu funktionieren, nicht
+        // aber unter Unix.
+        //
+        // assertEquals(timestamp, post.getTimestamp());
     }
 
     /**
@@ -114,13 +112,12 @@ class MessagePostTest {
 
         // Der Aufruf dieser Funktion ist Teil des Test. Diese darf nicht
         // verändert werden. Es darf auch keine weitere Methode in der zu
-        // Testenden Klasse 'MessagePost' ergänzt werden.
+        // testenden Klasse 'MessagePost' ergänzt werden.
 
         post.show();
-
-        // TODO Testfall ergänzen.
-
-        fail();
+        assertEquals("Daniel\n" +
+                "vor 0 Sekunden\n" +
+                "\tKeine Kommentare.\n", outContent.toString());
     }
 
     @Test
@@ -131,7 +128,10 @@ class MessagePostTest {
     @Test
     void testNullMessage() {
         post = new MessagePost(author, null);
-        assertEquals(message, post.getMessage());
+
+        assertThrows(IllegalStateException.class, () -> {
+            post.getMessage();
+        });
     }
 
     @Test
@@ -142,10 +142,7 @@ class MessagePostTest {
                 .append("erstreckt.");
 
         post = new MessagePost(author, buffer.toString());
-
-        // TODO Wie übeprüfen diese 'lange' Meldung?
-
-        fail();
+        assertEquals(buffer.toString(), post.getMessage());
     }
 
 }

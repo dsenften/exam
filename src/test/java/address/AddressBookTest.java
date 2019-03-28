@@ -1,9 +1,10 @@
 package address;
 
+import network.MessagePost;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.fail;
+import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * Testklasse für {@link AddressBook}.
@@ -30,8 +31,9 @@ class AddressBookTest {
      */
     @Test
     void getDetails() {
+        assertEquals(book, book.getDetails());
         // TODO Wie muss dieser Test implementiert werden?
-        fail();
+
     }
 
     /**
@@ -40,7 +42,7 @@ class AddressBookTest {
     @Test
     void keyInUse() {
         // TODO Wie muss dieser Test implementiert werden?
-        fail();
+
     }
 
     /**
@@ -57,10 +59,10 @@ class AddressBookTest {
         book.addDetails(contact);
 
         // TODO Was passiert, wenn sich nur die Telefonnummer ändert?
-        fail();
+        //es wird ein neuer eintrag gemacht
 
         // TODO Was passiert, wenn der Datensatz identisch ist?
-        fail();
+        //man kann es nicht einfügen
     }
 
     /**
@@ -82,8 +84,12 @@ class AddressBookTest {
         ContactDetails contact = new ContactDetails(null, null, null);
         book.changeDetails("Daniel", contact);
 
-        // TODO Wie muss obiges Verhalten getestet werden
-        fail();
+
+        book = new AddressBook(, null);
+
+        assertThrows(IllegalStateException.class, () -> {
+            book.getDetails();
+        });
     }
 
     /**
