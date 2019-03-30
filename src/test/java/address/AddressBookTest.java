@@ -3,7 +3,6 @@ package address;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.fail;
 
 /**
@@ -31,7 +30,8 @@ class AddressBookTest {
      */
     @Test
     void getDetails() {
-
+        // TODO Wie muss dieser Test implementiert werden?
+        fail();
     }
 
     /**
