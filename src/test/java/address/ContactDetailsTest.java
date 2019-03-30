@@ -61,8 +61,10 @@ class ContactDetailsTest {
      */
     @Test
     void equals() {
-        assertEquals(ContactDetails, contact.equals());
-        // TODO Wie muss dieser Test implementiert werden?
+        // Zwei Compilerfehler. Ich kann nicht eine Klasse 'ContactDetails'
+        // mit einer Methode vergleichen.
+        // assertEquals(ContactDetails, contact.equals());
+        fail();
     }
 
     /**
@@ -70,8 +72,8 @@ class ContactDetailsTest {
      */
     @Test
     void compareTo() {
-        assertEquals(ContactDetails, );
-        // TODO Wie muss dieser Test implementiert werden?
+        // Compilerfehler... (s. oben)
+        // assertEquals(ContactDetails, );
         fail();
     }
 

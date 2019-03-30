@@ -3,7 +3,6 @@ package address;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.fail;
 
 /**
@@ -31,7 +30,11 @@ class AddressBookTest {
      */
     @Test
     void getDetails() {
-        assertEquals(AddressBook, book.getDetails());
+        // An dieser Stelle sind ZWEI Compilerfehler. Ich kann keine Klasse
+        // 'AddressBook' mit einer Methode 'getDetails' vergleichen.
+
+        // assertEquals(AddressBook, book.getDetails());
+        fail();
     }
 
     /**
@@ -83,10 +86,10 @@ class AddressBookTest {
         ContactDetails contact = new ContactDetails(null, null, null);
         book.changeDetails("Daniel", contact);
 
-        contact = new ContactDetails(name null, phone null);
-
-        assertThrows(IllegalStateException.class, () -> {
-                    contact.changeDetails();
+//        contact = new ContactDetails(name null, phone null);
+//
+//        assertThrows(IllegalStateException.class, () -> {
+//                    contact.changeDetails();
     }
 
     /**
@@ -95,7 +98,6 @@ class AddressBookTest {
     @Test
     void search() {
 
-        }
         // TODO Wie muss dieser Test implementiert werden?
         fail();
     }
@@ -105,8 +107,10 @@ class AddressBookTest {
      */
     @Test
     void getNumberOfEntries() {
-        contact = new ContactDetails(name, phone, address.toString());
-        assertEquals(buffer.toString(), contact.getNumberOfEntries());
+        // An dieser Stelle sind 6 (!) Compilerfehler.
+        // contact = new ContactDetails(name, phone, address.toString());
+        // assertEquals(buffer.toString(), contact.getNumberOfEntries());
+        fail();
     }
 
     /**
