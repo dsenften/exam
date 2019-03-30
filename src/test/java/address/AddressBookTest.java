@@ -34,21 +34,21 @@ class AddressBookTest {
         ContactDetails contact;
         contact = new ContactDetails("Daniel", "1234", "Adresse 1");
         book.addDetails(contact);
-        assertEquals(contact, book.getDetails(getDetails());
 
+        // Bei der Funktio 'getDetail' ist ein Schlüssel gefragt, welcher entweder
+        // der Name oder das Telefon eines Kontaktes beinhaltet.
+        // Der Ansatz ist vorhanden. Aus diesem Grund habe ich diese Aufgabe als richtig bewertet.
+        assertEquals(contact, book.getDetails("Daniel"));
     }
-
-        // TODO Wie muss dieser Test implementiert werden?
-
-    
 
     /**
      * Testen der Methode {@link AddressBook#keyInUse(String)} )}.
      */
     @Test
     void keyInUse() {
-        // TODO Wie muss dieser Test implementiert werden?
-        assertEquals(true, book.keyInUse(ContactDetails.getName()));
+        // Auch hier muss ein Schlüssel zur Überprüfung verwendet werden.
+        // Der Ansatz ist vorhanden. Aus diesem Grund habe ich diese Aufgabe als richtig bewertet.
+        assertEquals(true, book.keyInUse("Daniel"));
 
     }
 
@@ -80,11 +80,14 @@ class AddressBookTest {
      */
     @Test
     void changeDetails() {
-        // TODO Wie muss dieser Test implementiert werden?
+        // Hier sollte nicht ein neuer Datensatz hinzugefügt werden, sondern
+        // ein bestehender ('changeDetails') verändert werden.
+
         ContactDetails contact;
         contact = new ContactDetails("Daniel", "1234", "Adresse 1");
         book.addDetails(contact);
 
+        fail();
     }
 
     /**
@@ -121,9 +124,9 @@ class AddressBookTest {
     @Test
     void getNumberOfEntries() {
         // TODO Wie muss dieser Test implementiert werden?
-        int length;
+        int length = 2;
         assertEquals(length, book.getNumberOfEntries());
-
+    }
 
     /**
      * Testen der Methode {@link AddressBook#removeDetails(String)}.

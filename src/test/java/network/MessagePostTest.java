@@ -44,7 +44,7 @@ class MessagePostTest {
     @Test
     void likeIt() {
 
-        assertEquals();
+        //assertEquals();
 
         // Zur Überprüfung der Anzahl 'gefällt mir' muss die
         // zu testende Klasse 'MessagePost' um eine Funktion
@@ -86,7 +86,7 @@ class MessagePostTest {
         post.addComment(comment);
         post.show();
 
-        assertEquals(comment, post.addComment());
+        //assertEquals(comment, post.addComment());
 
         // TODO Testfall ergänzen.
 
