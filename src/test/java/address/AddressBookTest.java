@@ -13,7 +13,11 @@ import static org.junit.jupiter.api.Assertions.*;
 class AddressBookTest {
 
     private AddressBook book;
-    private final String ContactDetails = "Daniel, +41 79 300 47 24, Hofstattweg 6, 3422 Kirchberg" ;
+
+    // Wenn Du hier ein 'ContactDetails' Objekt meinst, dann muss dies auch
+    // so implementiert werden und nicht in Form eines Strings.
+    private final ContactDetails contactDetails =
+            new ContactDetails("Daniel", "+41 79 300 47 24", "Hofstattweg 6, 3422 Kirchberg");
 
     @BeforeEach
     void setUp() {
@@ -32,8 +36,10 @@ class AddressBookTest {
      */
     @Test
     void getDetails() {
-        // TODO Wie muss dieser Test implementiert werden?
-        assertEquals(ContactDetails, book.getDetails("Daniel, +41 79 300 47 24, Hofstattweg 6, 3422 Kirchberg"));
+        // Bei der Suche mittels 'getDetails' darf nur der Schlüssel und nicht
+        // die komplette Information gesucht werden.
+        // Da der Ansatz gut ist habe ich diese Aufgabe als richtig bewertet.
+        assertEquals(contactDetails, book.getDetails("Daniel"));
 
     }
 
@@ -42,7 +48,7 @@ class AddressBookTest {
      */
     @Test
     void keyInUse() {
-        // TODO Wie muss dieser Test implementiert werden?
+        // Richtig
         assertTrue(book.keyInUse("Daniel"));
 
     }
@@ -72,9 +78,14 @@ class AddressBookTest {
      */
     @Test
     void changeDetails() {
-        // TODO Wie muss dieser Test implementiert werden?
-        ContactDetails contact = new ContactDetails("Peter", "+41 79 123 67 98", "Bernstrasse 19, 3011 Bern");
-        book.changeDetails("Leon", contact);
+        // Wir sollten an dieser Stelle schon eine neue Adresse eingeben, damit
+        // getestet werden kann.
+        ContactDetails contact = new ContactDetails("Peter", "+41 79 123 67 98", "Neue Adresse");
+        book.changeDetails("Peter", contact);
+
+        // Warum fehlt hier der Test?
+        // Da der Ansatz vorhanden ist habe ich den Punkt gegeben.
+        assertEquals(contact, book.getDetails("Peter"));
     }
 
     /**
@@ -97,7 +108,10 @@ class AddressBookTest {
     @Test
     void search() {
         // TODO Wie muss dieser Test implementiert werden?
-        assertTrue(book, search());
+
+        // Compilerfehler
+        // assertTrue(book, search());
+        fail();
     }
 
     /**
@@ -105,9 +119,11 @@ class AddressBookTest {
      */
     @Test
     void getNumberOfEntries() {
-        // TODO Wie muss dieser Test implementiert werden?
+        // Der Test wurde prinzipiell richtig erstellt. Nur sollte allerdings
+        // der erwartete Wert gemäss der Initialisierung ('setUp') auch noch
+        // korrekt angewendet werden 😀
        int numberOfEntries = book.getNumberOfEntries();
-       assertEquals(0, numberOfEntries );
+        assertEquals(2, numberOfEntries);
     }
 
     /**
