@@ -1,10 +1,10 @@
 package address;
 
-import network.MessagePost;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.fail;
 
 /**
  * Testklasse für {@link AddressBook}.
@@ -31,9 +31,13 @@ class AddressBookTest {
      */
     @Test
     void getDetails() {
-        assertEquals(book, book.getDetails());
-        // TODO Wie muss dieser Test implementiert werden?
 
+        // An dieser Stelle werden die 'ContactDetails' Details überprüft und
+        // nich ein 'book'.
+
+        // assertEquals(book, book.getDetails());
+
+        fail();
     }
 
     /**
@@ -42,7 +46,7 @@ class AddressBookTest {
     @Test
     void keyInUse() {
         // TODO Wie muss dieser Test implementiert werden?
-
+        fail();
     }
 
     /**
@@ -63,6 +67,8 @@ class AddressBookTest {
 
         // TODO Was passiert, wenn der Datensatz identisch ist?
         //man kann es nicht einfügen
+
+        fail();
     }
 
     /**
@@ -79,16 +85,11 @@ class AddressBookTest {
      */
     @Test
     void changeNullDetails() {
-
-        // Die folgenden Zeilen bitte nicht verändern. Diese sind korrekt.
-        ContactDetails contact = new ContactDetails(null, null, null);
-        book.changeDetails("Daniel", contact);
-
-
-        book = new AddressBook(, null);
-
+        // Der Ansatz war gut. Aus diesem Grund wird dieser Punkt gutgeschrieben.
         assertThrows(IllegalStateException.class, () -> {
-            book.getDetails();
+            // Die folgenden Zeilen bitte nicht verändern. Diese sind korrekt.
+            ContactDetails contact = new ContactDetails(null, null, null);
+            book.changeDetails("Daniel", contact);
         });
     }
 

@@ -73,7 +73,7 @@ class ContactDetailsTest {
     @Test
     void compareTo() {
         // TODO Wie muss dieser Test implementiert werden?
-        compareTo();
+        fail();
     }
 
     /**
@@ -82,6 +82,6 @@ class ContactDetailsTest {
     @Test
     void testToString() {
         // TODO Wie muss dieser Test implementiert werden?
-
+        fail();
     }
 }
