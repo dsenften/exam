@@ -17,7 +17,7 @@ class FotoPostTest {
 
     @BeforeEach
     void setUp() {
-        pos t = new FotoPost(author, fileName, title);
+        post = new FotoPost(author, fileName, title);
     }
 
     @Test
