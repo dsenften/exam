@@ -3,8 +3,7 @@ package address;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.fail;
+import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * Testklasse zur Übwerprüfung von {@link ContactDetails}.
@@ -14,21 +13,20 @@ class ContactDetailsTest {
 
     private final String name = "Daniel";
     private final String phone = "+41 79 300 47 24";
-    private final String addess = "Hofstattweg 6, 3422 Kirchberg";
+    private final String address = "Hofstattweg 6, 3422 Kirchberg";
     private ContactDetails contact;
 
     @BeforeEach
     void setUp() {
-        contact = new ContactDetails(name, phone, addess);
+        contact = new ContactDetails(name, phone, address);
     }
 
     @Test
     void testNullArgumentDetails() {
-
         // Die folgende Zeile darf nicht gelöscht werden.
-        contact = new ContactDetails(null, null, addess);
-
-        // TODO Wie kann dieser erwartetet Fehler getestet werden?
+        assertThrows(IllegalStateException.class, () -> {
+            contact = new ContactDetails(null, null, address);
+        });
     }
 
     /**
@@ -44,8 +42,7 @@ class ContactDetailsTest {
      */
     @Test
     void getPhone() {
-        // TODO Wie muss dieser Test implementiert werden?
-        fail();
+        assertEquals(phone, contact.getPhone());
     }
 
     /**
@@ -53,9 +50,7 @@ class ContactDetailsTest {
      */
     @Test
     void getAddress() {
-
-        // TODO Wie muss dieser Test implementiert werden?
-        fail();
+        assertEquals(address, contact.getAddress());
     }
 
     /**
@@ -63,8 +58,8 @@ class ContactDetailsTest {
      */
     @Test
     void equals() {
-        // TODO Wie muss dieser Test implementiert werden?
-        fail();
+        ContactDetails otherContact = new ContactDetails(name, phone, address);
+        assertEquals(contact, otherContact);
     }
 
     /**
@@ -72,8 +67,10 @@ class ContactDetailsTest {
      */
     @Test
     void compareTo() {
-        // TODO Wie muss dieser Test implementiert werden?
-        fail();
+        ContactDetails otherContact =
+                new ContactDetails("Peter", "BBB", "CCC");
+
+        assertTrue(contact.compareTo(otherContact) < 0);
     }
 
     /**
@@ -81,7 +78,12 @@ class ContactDetailsTest {
      */
     @Test
     void testToString() {
-        // TODO Wie muss dieser Test implementiert werden?
-        fail();
+        // https://docs.oracle.com/javase/tutorial/essential/environment/sysprop.html
+        String nl = System.getProperty("line.separator");
+        String expected = "Daniel" + nl +
+                "+41 79 300 47 24" + nl +
+                "Hofstattweg 6, 3422 Kirchberg";
+
+        assertEquals(expected, contact.toString());
     }
 }
