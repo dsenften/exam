@@ -36,6 +36,8 @@ class ContactDetailsTest {
      */
     @Test
     void getName() {
+        // Warum wurde nicht diese Testmethode als Vorbild für weitere
+        // Tests eingesetzt?
         assertEquals(name, contact.getName());
     }
 
