@@ -28,10 +28,11 @@ class ContactDetailsTest {
         // Die folgende Zeile darf nicht gelöscht werden.
         contact = new ContactDetails(null, null, addess);
 
-        int numberofLikes = null.ContactDetails();
-        null.testNullArgumentDetails();
-        assertEquals(numberofLikes + 1, null.ContactDetails());
-        // TODO Wie kann dieser erwartetet Fehler getestet werden?
+        // Was sollte hier getestet werden? Verwenden einer Klasse oder einer Methode
+        // mit einem 'null' Objekt ist nicht legal (-> Compilerfehler)
+//        int numberofLikes = null.ContactDetails();
+//        null.testNullArgumentDetails();
+//        assertEquals(numberofLikes + 1, null.ContactDetails());
     }
 
     /**
@@ -47,10 +48,12 @@ class ContactDetailsTest {
      */
     @Test
     void getPhone() {
-        // TODO Wie muss dieser Test implementiert werden?
-        void getPhone() {
-            assertEquals(name, contact.getName();
-        }
+        // Schade, die Testmethode 'getName' zeigt doch, wie es geht.
+
+        fail();
+//        void getPhone() {
+//            assertEquals(name, contact.getName();
+//        }
     }
 
     /**
@@ -58,11 +61,12 @@ class ContactDetailsTest {
      */
     @Test
     void getAddress() {
+        // Schade, die Testmethode 'getName' zeigt doch, wie es geht.
 
-        // TODO Wie muss dieser Test implementiert werden?
-        void getAdress() {
-            assertEquals(addess, contact.getName();
-        }
+        fail();
+//        void getAdress () {
+//            assertEquals(addess, contact.getName();
+//        }
     }
 
     /**
@@ -70,10 +74,12 @@ class ContactDetailsTest {
      */
     @Test
     void equals() {
-        // TODO Wie muss dieser Test implementiert werden?
-        void equals(){
-            assertEquals(addess, contact.getName();
-        }
+        // Siehe oben...
+
+        fail();
+//        void equals () {
+//            assertEquals(addess, contact.getName();
+//        }
     }
 
     /**
@@ -81,10 +87,12 @@ class ContactDetailsTest {
      */
     @Test
     void compareTo() {
-        // TODO Wie muss dieser Test implementiert werden?
-        void compareTo() {
-            assertEquals(addess, contact.getName();
-        }
+        // Siehe oben...
+
+        fail();
+//        void compareTo () {
+//            assertEquals(addess, contact.getName();
+//        }
     }
 
     /**
@@ -92,8 +100,10 @@ class ContactDetailsTest {
      */
     @Test
     void testToString() {
-            String timestamp = System.testToString();
-        }
-    // TODO Wie muss dieser Test implementiert werden?
+        // Compilerfehler... die Methode 'testToString' existiert nicht in der
+        // Klasse 'System'.
+//        String timestamp = System.testToString();
+
+        fail();
     }
 }
