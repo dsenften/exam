@@ -3,7 +3,6 @@ package address;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.fail;
 
 /**
@@ -31,7 +30,11 @@ class AddressBookTest {
      */
     @Test
     void getDetails() {
-assertEquals(9,9);
+        // Was ist die Idee eines Testfalles?
+
+        // assertEquals(9, 9);
+
+        fail();
     }
 
     /**
@@ -39,7 +42,11 @@ assertEquals(9,9);
      */
     @Test
     void keyInUse() {
-        assertEquals(1,1);
+        // Was ist die Idee eines Testfalles?
+
+        // assertEquals(1, 1);
+
+        fail();
     }
 
     /**
@@ -67,7 +74,11 @@ assertEquals(9,9);
      */
     @Test
     void changeDetails() {
-        assertEquals(123,123);
+        // Ich bin nicht sicher, ob das Prinzip eines Testfalles verstanden wurde.
+
+        // assertEquals(123,123);
+
+        fail();
     }
 
     /**
@@ -89,7 +100,11 @@ assertEquals(9,9);
      */
     @Test
     void search() {
-        assertEquals("name","name");
+        // Ich bin nicht sicher, ob das Prinzip eines Testfalles verstanden wurde.
+
+        // assertEquals("name","name");
+
+        fail();
     }
 
     /**
@@ -97,7 +112,11 @@ assertEquals(9,9);
      */
     @Test
     void getNumberOfEntries() {
-        assertEquals(163,163);
+        // Ich bin nicht sicher, ob das Prinzip eines Testfalles verstanden wurde.
+
+        // assertEquals(163,163);
+
+        fail();
     }
 
     /**
@@ -105,7 +124,11 @@ assertEquals(9,9);
      */
     @Test
     void removeDetails() {
-        assertEquals(163,163);
+        // Ich bin nicht sicher, ob das Prinzip eines Testfalles verstanden wurde.
+
+        // assertEquals(163,163);
+
+        fail();
     }
 
     /**
@@ -113,6 +136,10 @@ assertEquals(9,9);
      */
     @Test
     void listDetails() {
-        assertEquals(163,163);
+        // Ich bin nicht sicher, ob das Prinzip eines Testfalles verstanden wurde.
+
+        // assertEquals(163,163);
+
+        fail();
     }
 }

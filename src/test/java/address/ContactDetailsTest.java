@@ -45,7 +45,13 @@ class ContactDetailsTest {
      */
     @Test
     void getPhone() {
-        assertEquals(16391287,1632309487);
+        // Interessanter Test... Nur hat dieser leider mit der Aufgabenstellung
+        // nichts zu tun. Warum wirde nicht dite Testmethode 'getName'
+        // zum Vorbild genommen?
+
+        // assertEquals(16391287,1632309487);
+
+        fail();
     }
 
     /**
@@ -53,8 +59,13 @@ class ContactDetailsTest {
      */
     @Test
     void getAddress() {
+        // Interessanter Test... Nur hat dieser leider mit der Aufgabenstellung
+        // nichts zu tun. Warum wirde nicht dite Testmethode 'getName'
+        // zum Vorbild genommen?
 
-        assertEquals("adresse","adresse");
+        // assertEquals("adresse","adresse");
+
+        fail();
     }
 
     /**
@@ -62,7 +73,13 @@ class ContactDetailsTest {
      */
     @Test
     void equals() {
-        assertEquals(15,15);
+        // Interessanter Test... Nur hat dieser leider mit der Aufgabenstellung
+        // nichts zu tun. Warum wirde nicht dite Testmethode 'getName'
+        // zum Vorbild genommen?
+
+        // assertEquals(15,15);
+
+        fail();
     }
 
     /**
@@ -70,7 +87,14 @@ class ContactDetailsTest {
      */
     @Test
     void compareTo() {
-        assertEquals(163,163);
+
+        // Interessanter Test... Nur hat dieser leider mit der Aufgabenstellung
+        // nichts zu tun. Warum wirde nicht dite Testmethode 'getName'
+        // zum Vorbild genommen?
+
+        // assertEquals(163,163);
+
+        fail();
     }
 
     /**
@@ -78,6 +102,12 @@ class ContactDetailsTest {
      */
     @Test
     void testToString() {
-        assertEquals(163,163);
+        // Interessanter Test... Nur hat dieser leider mit der Aufgabenstellung
+        // nichts zu tun. Warum wirde nicht dite Testmethode 'getName'
+        // zum Vorbild genommen?
+
+        // assertEquals(163,163);
+
+        fail();
     }
 }
